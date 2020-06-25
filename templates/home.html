@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hello {{name}} Welcome to Home Page </h1>
+
+    <form action="add" method="post">
+
+        {% csrf_token %}
+
+        Num1 :- <input type="text" name="num1" placeholder="Enter 1st Number"><br><br>
+        Num2 :- <input type="text" name="num2" placeholder="Enter 2nd Number"><br><br>
+        <input type="submit">
+    </form>
+{% endblock %}
